@@ -63,6 +63,17 @@ class File extends Model
         });
     }
 
+    public function getTypeAttribute()
+    {
+        if (Str::startsWith($this->mime, 'image/')) {
+            return 'image';
+        } elseif (Str::startsWith($this->mime, 'video/')) {
+            return 'video';
+        } else {
+            return 'file';
+        }
+    }
+
     public function getGlideUrlAttribute()
     {
         if (Str::startsWith($this->mime, 'image/')) {
