@@ -17,6 +17,7 @@ class MediaServiceProvider extends PackageServiceProvider
         $package
             ->name('kedeka-media')
             ->hasMigration('create_media_table')
+            ->hasConfigFile('kedeka/media')
             ->hasRoutes('admin', 'web');
     }
 

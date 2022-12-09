@@ -1,15 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Kedeka\Media\Controllers\DestroyController;
 
 Route::middleware(array_merge([
     'web',
-], config('kedeka.admin.middleware', []))
+], config('kedeka.middleware', []))
 )
-->domain(config('kedeka.admin.domain'))
-->prefix(config('kedeka.admin.path'))
-->name('kedeka::admin')
+->name('kedeka::media')
 ->group(function () {
-    Route::prefix('media')->name('.media.')->group(function () {
-    });
+    Route::delete('/media/{file}', DestroyController::class)->name('.destroy');
 });
