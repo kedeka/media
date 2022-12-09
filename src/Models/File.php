@@ -95,6 +95,6 @@ class File extends Model
 
     public function attachments(): HasMany
     {
-        return $this->hasMany(Attachment::class);
+        return $this->hasMany(config('kedeka.media.models.attachment'));
     }
 }

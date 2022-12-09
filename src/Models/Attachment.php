@@ -35,7 +35,7 @@ class Attachment extends Model
 
     public function file()
     {
-        return $this->belongsTo(File::class);
+        return $this->belongsTo(config('kedeka.media.models.file'));
     }
 
     public function attachable()
