@@ -11,6 +11,5 @@ Route::middleware(array_merge([
 ->name('kedeka::admin')
 ->group(function () {
     Route::prefix('media')->name('.media.')->group(function () {
-        
     });
 });
