@@ -17,8 +17,7 @@ class MediaServiceProvider extends PackageServiceProvider
         $package
             ->name('kedeka-media')
             ->hasMigration('create_media_table')
-            ->hasRoutes('admin', 'web')
-            ->hasCommand(MediaCommand::class);
+            ->hasRoutes('admin', 'web');
     }
 
     public function packageRegistered()
