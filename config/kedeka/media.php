@@ -11,5 +11,5 @@ return [
     'models' => [
         'attachment' => \Kedeka\Media\Models\Attachment::class,
         'file' => \Kedeka\Media\Models\File::class,
-    ]
+    ],
 ];

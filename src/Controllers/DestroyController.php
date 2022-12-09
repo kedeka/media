@@ -1,4 +1,5 @@
 <?php
+
 namespace Kedeka\Media\Controllers;
 
 use Illuminate\Http\Request;
@@ -10,20 +11,19 @@ class DestroyController
     {
         $file = app(config('kedeka.media.models.file'))->find($id);
 
-        if($file){
+        if ($file) {
             Storage::disk($file->disk)->delete($file->path);
             $file->attachments()->delete();
             $file->delete();
         }
 
-        if($request->header('X-Inertia')){
+        if ($request->header('X-Inertia')) {
             return redirect()->back();
-        }else{
+        } else {
             return response()->json([
                 'success' => true,
                 'message' => 'File telah dihapus',
             ]);
         }
-        
     }
 }
