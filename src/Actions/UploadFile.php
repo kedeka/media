@@ -6,8 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
+/** @package Kedeka\Media\Actions */
 class UploadFile
 {
+    /**
+     * @param Model $model 
+     * @param string $attribute 
+     * @param UploadedFile $file 
+     * @return mixed 
+     */
     public function upload(Model $model, string $attribute, UploadedFile $file)
     {
         tap($model->{$attribute}, function ($previous) use ($model, $attribute, $file) {
