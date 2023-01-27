@@ -1,19 +1,18 @@
 <?php
+
 namespace Kedeka\Media\Actions;
 
-use Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
-/** @package Kedeka\Media\Actions */
 class UploadFile
 {
     /**
-     * @param Model $model 
-     * @param string $attribute 
-     * @param UploadedFile $file 
-     * @return mixed 
+     * @param  Model  $model
+     * @param  string  $attribute
+     * @param  UploadedFile  $file
+     * @return mixed
      */
     public function upload(Model $model, string $attribute, UploadedFile $file)
     {
