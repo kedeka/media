@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   php-code-styling:
-    runs-on: [self-hosted, ubuntu-latest]
+    runs-on: [self-hosted]
 
     steps:
       - name: Checkout code

@@ -7,7 +7,7 @@ permissions:
 
 jobs:
   dependabot:
-    runs-on: [self-hosted, ubuntu-latest]
+    runs-on: self-hosted
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
 
