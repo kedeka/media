@@ -34,6 +34,6 @@ class UploadFile
             }
         });
 
-        return $model->${$attribute};
+        return $model->{$attribute};
     }
 }
