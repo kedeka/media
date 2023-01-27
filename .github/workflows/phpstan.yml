@@ -9,7 +9,7 @@ on:
 jobs:
   phpstan:
     name: phpstan
-    runs-on: self-hosted
+    runs-on: [self-hosted, ubuntu-latest]
     steps:
       - uses: actions/checkout@v3
 
