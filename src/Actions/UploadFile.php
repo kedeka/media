@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Storage;
 class UploadFile
 {
     /**
-     * @param  Model  $model
-     * @param  string  $attribute
-     * @param  UploadedFile  $file
      * @return mixed
      */
     public function upload(Model $model, string $attribute, UploadedFile $file)
