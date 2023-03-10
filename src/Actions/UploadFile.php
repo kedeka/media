@@ -2,7 +2,6 @@
 
 namespace Kedeka\Media\Actions;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 

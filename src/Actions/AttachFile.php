@@ -14,7 +14,6 @@ class AttachFile
     public function attach(Model $model, string $attribute, UploadedFile $file)
     {
         tap($model->{$attribute}, function ($previous) use ($model, $attribute, $file) {
-            
             $media = (new UploadFile)->upload($file);
 
             $media->attachedTo($model, $attribute);
