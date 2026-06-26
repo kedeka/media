@@ -5,7 +5,7 @@ namespace Kedeka\Media\Controllers;
 use Illuminate\Filesystem\FilesystemManager;
 use Illuminate\Http\Request;
 use Kedeka\Media\Factories\GlideFactory;
-use League\Glide\Responses\LaravelResponseFactory;
+use Kedeka\Media\Factories\LaravelResponseFactory;
 
 class GlideController
 {
@@ -17,7 +17,7 @@ class GlideController
         $request->mergeIfMissing(['w' => 500, 'fm' => 'webp', 'q' => 75]);
 
         $server = GlideFactory::create([
-            'response' => new LaravelResponseFactory($request),
+            'response' => new LaravelResponseFactory(),
             'source' => $filesystem->getDriver(),
             'cache' => $filesystem->getDriver(),
             'cache_path_prefix' => '.glide-cache',
